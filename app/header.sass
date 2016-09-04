@@ -1,0 +1,405 @@
+@import "bourbon"
+@import "sass/vars"
+@import "sass/base"
+
+//First screen styles
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "OpenSansRegular", sans-serif
+	overflow-x: hidden
+	color: #222
+
+h1, h2, h3, h4, h5, h6
+	font-family: "OpenSansLight", sans-serif
+	font-weight: normal
+
+h1
+	font-size: em(43)
+
+h2
+	font-size: em(34)
+
+h3, h4
+	font-family: "OpenSansSemiBold", sans-serif
+	text-transform: uppercase
+	font-size: em(17)
+
+h1
+	font-size: em(15)
+ul
+	margin: 0
+	padding: 0
+
+.header_wrap
+	background-image: url("img/bg_top.jpg")
+	background-size: cover
+	background-position: top center
+	min-height: 100vh
+	overflow: hidden
+
+.mnu-line
+	margin-top: 50px
+
+.logo
+	display: block
+	width: 100px
+	img
+		width: 100%
+
+.phone
+	text-align: right
+	line-height: 1.4
+	.phone-wrap
+		color: #414e5b
+		font-family: "Exo2Bold", sans-serif
+		font-size: em(20px)
+		line-height: em(14px)
+		.fa
+			font-size: em(18px)
+			position: relative
+			top: 2px
+			margin-right: 5px
+	.callback
+		color: #7e91a4
+		display: inline-block
+		font-size: em(13px)
+		line-height: em(20px)
+		border-bottom: 1px dashed #7e91a4
+		+mt(.3s)
+		&:hover, &:focus
+			text-decoration: none
+			border-color: transparent
+nav,
+.header-content
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+.main-mnu
+	text-align: center
+	font-size: em(13px)
+	> ul
+		> li
+			> a
+				display: block
+				padding: 12px 18px
+				color: #7e91a4
+				+mt(.5s)
+				&:hover
+					color: #414e5b
+			&.active
+				a
+					color: #414e5b
+					text-decoration: underline
+.mob-mnu
+	background-color: $blue
+	position: relative
+	top: 20px
+	margin-top: 10%
+	display: none
+	
+	ul
+		padding: 20px 0
+		li
+			display: block
+			a
+
+				+mt(.5s)
+				&:hover, &:focus
+					background-color: $accent
+					color: #fff
+					text-decoration: none
+		.active
+			a
+				color: #fff
+				text-decoration: none
+
+	.active
+		a
+			color: red
+
+.header_info
+	margin: 3% 0
+	h1
+		font-size: em(42)
+		line-height: 1.2
+	ul
+		margin-top: 45px
+		margin-bottom: 65px
+		li
+			list-style-type: none
+			font-family: "OpenSansSemiBold", sans-serif
+			font-size: em(17px)
+			.fa
+				margin-right: 5px
+	img
+		margin-top: 40px
+.button_green
+	padding: 15px 35px
+	background: #14b75a
+	font-family: "OpenSansRegular", sans-serif
+	font-size: em(14px)
+	text-transform: uppercase 
+	color: #fff
+	letter-spacing: 2px
+	border-radius: 4px
+	border-bottom: solid 4px #0e9c4b
+	+mt(.3s)
+	&:hover, &:focus
+		background-color: #0e9c4b
+		text-decoration: none
+		color: #fff
+.responsive-img
+	max-width: 100%
+//icon mouse animation
+.mouse-vrap
+	margin-top: 5%
+	height: 100%
+	text-align: center
+
+.mouse-icon
+	border: 2px solid $blue
+	border-radius: 16px
+	height: 40px
+	width: 24px
+	z-index: 10
+	opacity: 0.7
+	display: inline-block
+	cursor: pointer
+	.wheel
+		animation-name: drop
+		animation-duration: 1s
+		animation-timing-function: linear
+		animation-delay: 0s
+		animation-iteration-count: infinite
+		animation-play-state: running
+		position: relative
+		border-radius: 10px
+		background: $blue
+		width: 2px
+		height: 6px
+		top: 4px
+		margin-left: auto
+		margin-right: auto
+@-webkit-keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+
+	30%
+		top: 10px
+		opacity: 1
+
+	100%
+		top: 25px
+		opacity: 0
+
+@keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+
+	30%
+		top: 10px
+		opacity: 1
+
+	100%
+		top: 25px
+		opacity: 0
+
+.m-a-wrapper
+	text-align: center
+	margin-top: 2%
+//end icon mouse animation
+//button transformation
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $blue
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu
+	position: absolute
+	right: 15px
+	top: 0
+//enb button transformation
+//button transformation
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $blue
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+//enb button transformation
+.hidden-mnu
+	background-color: $blue
+	display: none
+	position: relative
+	top: 20px
+	ul
+		padding: 20px 0
+		li
+			display: block
+			&.active
+				a
+					text-decoration: underline
+					color: $accent
+			&:hover
+				a
+					color: #fff
+					background-color: $accent
+					text-decoration: none
+.s-wide-xs
+	padding: 53px 0
+.s-wide-m
+	padding: 80px 0
+.s-wide-l
+	padding: 100px 0
+
+.s-dark
+	background-color: $blue
+	h1
+		color: #fff
+.s-light
+	background-color: #f8f8f8
+
+.s-adv
+
+		h3
+			font-family: "Exo2Bold", sans-serif
+			font-size: em(20px)
+			color: #dde9f3
+			line-height: 0
+			span
+				font-size: em(20px)
+				color: $accent
+				margin-right: 5px
+		p
+			font-family: "OpenSansLight", sans-serif
+			font-size: em(15px)
+			color: #c4d1de
+			margin-bottom: 0
+			padding-bottom: 0
+.table
+	display: table
+	width: 100%
+	.tr
+		display: table-row
+	.td
+		display: table-cell
+		vertical-align: middle
+
+.contact-form
+	padding: 1px 26px
+	background: darken($blue, 7%)
+	&-head
+		text-align: center
+		h4
+			font-family: "OpenSansBold", sans-serif
+			font-size: em(18px)
+			text-transform: uppercase
+			color: #fff
+		p
+			font-family: "OpenSansRegular", sans-serif
+			font-size: em(14px)
+			color: #fff
+			opacity: .6
+			text-align: center
+			line-height: 2
+
+	label
+		font-family: "OpenSansRegular", sans-serif
+		font-size: em(14px)
+		color: #fff
+		opacity: .6
+		display: block
+		margin: 10px 0 5px 0 
+
+	input
+			height: 46px
+			width: 100%
+			border-radius: 3px
+			border: none
+			background: #acb6be
+			color: #222222
+			font-family: "OpenSansSemiBold", sans-serif
+			font-size: em(15px)
+			padding-left: 17px
+			+mt(.5s)
+			&:focus
+				background: 
+		
+	a
+		margin-top: 37px
+		text-align: center	
+		background: $accent
+		border-bottom: 5px solid #D59D16
+		color: #fff
+		width: auto
