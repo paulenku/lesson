@@ -382,22 +382,26 @@ nav,
 		display: block
 		margin: 10px 0 5px 0 
 
-	input
+	input, select
 			height: 46px
 			width: 100%
 			border-radius: 3px
 			border: none
-			background: #acb6be
+			background: rgba(255,255,255,.6)
 			color: #222222
 			font-family: "OpenSansSemiBold", sans-serif
 			font-size: em(15px)
 			padding-left: 17px
-			+mt(.5s)
+			display: block
+			
+			+mt(.25s)
 			&:focus
-				background: 
-		
-	a
-		margin-top: 37px
+				background: #fff
+				border-bottom: lighten($blue, 10%) 4px solid 
+				text-decoration: none
+
+	button
+		border: none
 		text-align: center	
 		background: $accent
 		border-bottom: 5px solid #D59D16

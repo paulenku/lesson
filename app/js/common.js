@@ -1,4 +1,7 @@
 $(function() {
+
+
+
 	$(".item-wrap").owlCarousel({
 		loop: true,
 		responsive:{
